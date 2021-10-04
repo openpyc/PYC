@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 17-08-2010 12:26:44 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+    <class name="cl.open.openproject.pojo.Cardtemplates" table="cardtemplates" catalog="innovain_PYC">
+        <id name="cardTemplatesId" type="java.lang.Integer">
+            <column name="CardTemplatesID" />
+            <generator class="identity" />
+        </id>
+        <property name="customerId" type="java.lang.Long">
+            <column name="CustomerID" />
+        </property>
+        <property name="cardTypeId" type="java.lang.Integer">
+            <column name="CardTypeID" not-null="true" />
+        </property>
+        <property name="cardTemplatesDate" type="date">
+            <column name="CardTemplatesDate" length="10" />
+        </property>
+        <property name="cardTemplatesState" type="java.lang.Integer">
+            <column name="CardTemplatesState" />
+        </property>
+        <property name="cardTemplatesWidth" type="java.lang.Integer">
+            <column name="CardTemplatesWidth" />
+        </property>
+        <property name="cardTemplatesHeight" type="java.lang.Integer">
+            <column name="CardTemplatesHeight" />
+        </property>
+        <property name="cardTemplatesOrientation" type="string">
+            <column name="CardTemplatesOrientation" length="1" />
+        </property>
+        <property name="cardTemplatesPreview" type="binary">
+            <column name="CardTemplatesPreview" />
+        </property>
+        <property name="cardTemplatesName" type="string">
+            <column name="CardTemplatesName" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

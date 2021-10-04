@@ -1,0 +1,100 @@
+/* GENERAL */
+*					{ margin:0; padding:0; outline:0;}
+img, div, li		{ behavior: url("iepngfix.htc"); }
+img a, a img		{ border: none;}
+html, body			{ width:100%;  }
+body				{ behavior: url("csshover.htc"); }
+body				{ background:#eaeaea url(img/bg_hd.jpg) no-repeat top center; font-family: Trebuchet, Arial, Helvetica, sans-serif; font-size:13px; 
+					  color:#444; line-height:20px;}
+
+#contenedor_idx		{ width:100%; display:block ;margin:0 auto; background:#24739e url(img/bg_azul.jpg) repeat-x; overflow:hidden;}				
+#contenedor			{ width:100%; display:block ;margin:0 auto; background:#eaeaea url(img/bg2.jpg) repeat-x; overflow:hidden;}				
+
+#contenido			{ width:950px; margin:0 auto; }
+#info				{ width:930px; float:left;overflow:hidden; bottom:0; top:190px; background:url(img/bg.jpg) repeat-y; padding:0 10px;}
+#textos				{ width:890px; overflow:hidden; padding:20px 20px 5px 20px; background:#ebebeb url(img/bg_txt.jpg) repeat-x; float:left;
+					  min-height:460px;  _height:450px;}
+.dw_textos			{ width:950px; height:23px; float:left;background: url(img/dw_txt.jpg);}
+#menu				{ width:940px; height:20px; text-align:center; padding:0 0 0 10px; float:left; position:relative; margin:5px 0 0 0; }
+#pie_idx, #pie		{ width:930px; float:left;background:url(img/bg_pie.jpg) no-repeat top center; color:#fff; text-align:center; margin:20px 0 0 0;  
+					  height:26px; font-size:12px; padding:5px 10px 0px 10px; }
+#pie_idx			{ background:url(img/bg_pieidx.jpg) no-repeat top center;}
+#pie_idx a, #pie a	{ color:#fff; text-decoration:none;}
+#pie_idx a:hover, #pie a:hover{ text-decoration:underline;}
+#header				{ width:950px; height:18px;margin:0 auto; padding:132px 0 0 0;}
+ul#menu_hd			{ width:650px; overflow:hidden; height:13px; padding:0; margin:0 auto;line-height:11px; float:right; }
+ul#menu_hd li		{ float:right; list-style-type:none; padding:0 10px; border-right:1px solid #80acc4; font-size:11px;   }
+ul#menu_hd li a		{ color:#003762; text-decoration:none;}
+ul#menu_hd li a:hover{ text-decoration:underline;}
+ul#menu_hd li.no_borde{ border:none;}
+.btns				{ width:800px; height:25px; margin:0 auto; }
+
+
+
+/*INDEX*/
+#slider				{ width:400px; height:270px; border:5px solid #d1d1d1; float:left; margin:0 30px 0 0; overflow:hidden; }
+.box				{ width:950px; float:left; margin:20px 0 38px 0; }
+.testimonio			{ width:500px; overflow:hidden; margin:0 0 20px 0; background: url(img/abre.jpg) no-repeat left top;}
+.testimonio p		{ color:#666; text-align:right; margin:10px 0 0 0; font-size:11px; font-style:italic;}
+.testimonio p strong{ color:#f0a40b; font-size:15px;}
+blockquote			{ color:#005787; font-size:15px; background:url(img/cierra.jpg) no-repeat right bottom; width:460px; padding:0 18px; overflow:hidden; 					  max-height:85px;text-align:justify; text-indent:10px; }
+.box2				{ width:300px; height:70px; float:left; margin:0 8px 15px 8px;}
+.box2_img			{ width:85px; height:70px; float:left; display:block; margin:0 15px 0 0; text-align:left;}
+.box2 h1			{ color:#ee9a00; font-size:16px; font-weight:normal;}
+.box2 p				{ color:#fff; line-height:16px; font-size:12px;}
+
+.caja				{ width:242px; height:150px; float:left;}
+.caja_up			{ width:242px; height:10px; float:left; background:url(img/box_up.jpg) no-repeat;}
+.caja_txt			{ width:222px; height:105px; background:#d5e8f1; padding:5px 10px; overflow:hidden;}
+.caja_dw			{ width:242px; height:10px; float:left; background:url(img/box_dw.jpg) no-repeat;}
+
+.caja_txt ul li 	{ list-style-type:none; margin:0; padding:0;}
+.caja_txt ul li	a	{ list-style-type:none; background:url(img/flecha.jpg) no-repeat 0 3px; padding:0 0 0 15px; float:left; font-size:11px; 
+					  color:#004165; text-decoration:none; line-height:15px; }
+.caja_txt ul li	a:hover { text-decoration:underline;}					  
+
+.login label		{ color:#004165; float:left; width:70px; margin:0; height:15px; font-size:11px;   }
+.login input		{ width:145px; float:left; margin-bottom:10px;}		
+.enter				{ background:url(img/enter.jpg) no-repeat right 0; width:220px; height:15px; float:right; margin:0 7px 7px 0; border:none; }	
+.forgot, .create	{ font-size:9px; color:#666; background:url(img/forgot.jpg) no-repeat 0 4px; text-decoration:none; text-indent:15px; 
+					  font-style:italic; float:left; }
+.create				{ background:url(img/new_account.jpg) no-repeat 0 4px; margin:0 0 0 5px; text-indent:20px;}					  
+.forgot:hover, .create:hover { text-decoration:underline;}
+
+/*INFO*/
+.img_txt			{ width:340px; height:240px; float:left; margin:0 20px 10px 0; border:3px solid #e5e5e5;}
+.seccion			{ width:100%; float:left; border-bottom:1px solid #24739e; padding:0 0 3px 0; margin:0 0 20px 0;}
+ul.lista			{ margin:0 0 0 10px; float:left; width:450px; list-style-type:none;}
+ul.datos			{ margin:35px 0 0 35px; float:left; width:300px;}
+ul.lista li			{ background:url(img/vineta.gif) no-repeat 0 5px; margin-bottom:15px; list-style-type:none; padding:0 0 0 20px;}
+ul.datos li			{ margin-bottom:20px; list-style-type:none; padding:0 0 0 20px;}
+ul.datos li img		{ margin:0 10px 0 0;}
+
+
+
+/*TUTORIALS*/
+.tutorials			{ width:340px; overflow:hidden;float:left; margin:20px 0 0 0; }
+.see				{ width:175px; height:28px; background:url(img/titulos/video.jpg) no-repeat; }
+.videos				{ width:328px; background:#d9d9d9; border:1px solid #c0c0c0; color:#005d90; font-size:11px; padding:5px; line-height:18px;}
+.videos a			{ color:#005d90; text-decoration:none;}
+.videos a:hover		{ color:#005d90; text-decoration:underline;}
+
+
+/*CONTACTO*/	
+.formulario		 	{ width:380px; padding: 40px 20px; margin:0 auto; background:#fff; overflow:hidden; border-style:solid; border-width:1px;
+					  border-color:#eee #ddd #ddd #eee}
+.formulario p		{ font-size:12px; margin-bottom:20px; }
+.formulario label	{ float:left;height:15px;width:100px;background-repeat:no-repeat;margin-right:15px;background-position:left;display:block; 
+					  color:#173d64}
+.campos2 			{ font-family:Arial, Helvetica, sans-serif;font-size:11px;color:#333333;float: left;height: 25px;width: 240px;
+					  margin-bottom:10px;border: 1px solid #ddd;display: block; background:#eee;}
+.mensaje2 			{ display: block;float: left;height: 100px;width: 240px;border: 1px solid #ccc;}
+.campos2:hover, .mensaje2:hover, .campos2:focus, .mensaje2:focus { border: 1px solid #bbb; background:#fff;}
+.btn_contacto		{ float:left; width:155px; height:20px; margin-top:10px; margin-left:180px;_margin-left:80px;}
+button:hover		{ cursor:pointer;}
+.margen_contacto	{ margin-right:15px;}
+.pie_form			{ width:500px; height:25px; background-color:#e4e4e4; margin: 0 0 30px 20px; float:left;} 
+.txt				{ font-size:16px; line-height:24px;}
+
+
+

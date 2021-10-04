@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+/** 
+ * Default CSS Drop-Down Menu Theme
+ *
+ * @file		default.css
+ * @name		Default
+ * @version		0.1.1
+ * @type		transitional
+ * @browsers	Windows: IE5+, Opera7+, Firefox1+
+ *				Mac OS: Safari2+, Firefox2+
+ *
+ * @link		http://www.lwis.net/
+ * @copyright	2008 Live Web Institute. All Rights Reserved.
+ *
+ * Module Classes: *.dir {} *.on {} *.open {} li.hover {} li.first {} li.last {}
+ * Expected directory tag - li
+ *
+ */
+
+
+/*-------------------------------------------------/
+ * @section		Base Drop-Down Styling
+ * @structure	ul (unordered list)
+ *				ul li (list item)
+ *				ul li a (links)
+ *				/*\.class|(li|a):hover/
+ * @level sep	ul
+ */
+
+
+ul.dropdown {font-weight:normal;font-size:16px; font-family:Arial, Helvetica, sans-serif; padding:0; margin:0 0 0 20px; }
+ul.dropdown li{border:none;color:#fff;text-transform:lowercase;font-weight:normal;padding:0 13px 5px 0;border-right:1px solid #fac14d; line-height:15px;}
+ul.dropdown li:hover, ul.dropdown li.activo {color: #10527f;cursor:pointer;}
+ul.dropdown a:link, ul.dropdown a:visited	{ color: #fff; text-decoration: none; }
+ul.dropdown a:hover		{ color: #10527f !important; }
+ul.dropdown a:active	{ color: #10527f; }
+
+
+
+/* -- ESTILOS SUBMENU -- */
+
+ul.dropdown li ul { border-top:1px solid #ccc; font-size:11px; text-align:left; }
+ul.dropdown li ul li { padding: 3px 10px;  background-color: #fff; border-bottom:1px solid #ccc;  text-decoration:none; border-right:none !important;}
+ul.dropdown li ul li:hover {background: #ddd;}
+ul.dropdown li ul li:hover a{ color: #333 !important; } /*COLOR SUBMENU*/
+
+ul.dropdown ul{width:150px;background-color:#9bb4b3;margin:0; border-width:0px 1px 0px 1px;border-style:solid; border-color:#ddd #ccc #ddd #ccc;z-index:1000;}
+ul.dropdown ul li {border-bottom:1px solid #ccc !important;}
+ul.dropdown ul li a { text-transform: none !important; width:500px !important; color:#666 !important;}
+ul.dropdown ul li a:hover{ color:#003333;}
+ul.dropdown ul li {font-weight: normal;}
+
+ul.dropdown ul li ul li { /*border:1px solid #FFFF00;*/ } /*MENU DE SUBMENU*/
+ul.dropdown ul li ul li < a { color:#00FF00 !important; }
+
+
+/*-------------------------------------------------/
+ * @section		Support Class `dir`
+ * @level sep	ul, .class
+ */
+
+
+ul.dropdown > li:hover ul li:hover { color: #fff;} /*PARA QUE QUEDE MARCADO EL MENU ANTERIOR AL SUBMENU*/
+
+ul.dropdown *.dir {
+ margin-right: 15px;
+ background-image: url(images/nav-arrow-down.png);
+ background-position: 100% 50%;
+ background-repeat: no-repeat;
+}
+
+
+/* -- Components override -- */
+
+ul.dropdown-horizontal ul *.dir {
+ padding-right: 15px;
+ background-image: url(images/nav-arrow-right.png);
+ background-position: 100% 50%;
+ background-repeat: no-repeat;
+}
+
+ul.dropdown-upward *.dir {
+ background-image: url(images/nav-arrow-top.png); 
+}
+
+ul.dropdown-vertical *.dir,
+ul.dropdown-upward ul *.dir {
+ background-image: url(images/nav-arrow-right.png);
+}
+
+ul.dropdown-vertical-rtl *.dir {
+ padding-right: 10px;
+ padding-left: 15px;
+ background-image: url(images/nav-arrow-left.png);
+ background-position: 0 50%;
+}

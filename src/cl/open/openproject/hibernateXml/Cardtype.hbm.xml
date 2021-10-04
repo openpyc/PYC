@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 17-08-2010 12:26:44 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+    <class name="cl.open.openproject.pojo.Cardtype" table="cardtype" catalog="innovain_PYC">
+        <id name="cardTypeId" type="java.lang.Integer">
+            <column name="CardTypeID" />
+            <generator class="identity" />
+        </id>
+        <property name="cardTypeDescription" type="string">
+            <column name="CardTypeDescription" length="40" />
+        </property>
+        <property name="cardTypeAmount" type="java.lang.Integer">
+            <column name="CardTypeAmount" />
+        </property>
+        <property name="cardTypeCostPerCard" type="java.lang.Float">
+            <column name="CardTypeCostPerCard" precision="12" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

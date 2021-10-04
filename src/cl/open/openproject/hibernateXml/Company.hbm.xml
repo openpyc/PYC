@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 17-08-2010 12:26:44 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+    <class name="cl.open.openproject.pojo.Company" table="company" catalog="innovain_PYC">
+        <id name="companyId" type="java.lang.Integer">
+            <column name="CompanyID" />
+            <generator class="identity" />
+        </id>
+        <property name="idCreditCard" type="java.lang.Integer">
+            <column name="idCreditCard" not-null="true" />
+        </property>
+        <property name="stateCountryId" type="java.lang.Integer">
+            <column name="StateCountryID" not-null="true" />
+        </property>
+        <property name="companyPaymentAddress1" type="string">
+            <column name="CompanyPaymentAddress1" />
+        </property>
+        <property name="companyFlagOffer" type="java.lang.Integer">
+            <column name="CompanyFlagOffer" />
+        </property>
+        <property name="companyAvailableBalance" type="java.lang.Float">
+            <column name="CompanyAvailableBalance" precision="12" scale="0" />
+        </property>
+        <property name="companyAutomaticAmount" type="java.lang.Float">
+            <column name="CompanyAutomaticAmount" precision="12" scale="0" />
+        </property>
+        <property name="companyName" type="string">
+            <column name="CompanyName" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

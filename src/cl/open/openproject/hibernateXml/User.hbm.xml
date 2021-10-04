@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-05-2010 12:25:52 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping schema="innovain_PYC">
+ <class name="cl.open.openproject.pojo.User" table="user">
+  <id name="UserID" type="java.lang.Integer">
+   <column name="UserID"/>
+   <generator class="assigned"/>
+  </id>
+  <property generated="never" lazy="false" name="CustomerID" type="java.lang.Integer">
+   <column name="CustomerID"/>
+  </property>
+  <property generated="never" lazy="false" name="UserName" type="java.lang.String">
+   <column name="UserName"/>
+  </property>
+  <property generated="never" lazy="false" name="UserPassword" type="java.lang.String">
+   <column name="UserPassword"/>
+  </property>
+  <property generated="never" lazy="false" name="UserStatus" type="java.lang.String">
+   <column name="UserStatus"/>
+  </property>
+ </class>
+</hibernate-mapping>

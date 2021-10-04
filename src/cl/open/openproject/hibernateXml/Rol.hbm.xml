@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-05-2010 01:36:21 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping schema="innovain_PYC">
+ <class name="cl.open.openproject.pojo.Rol" table="rol">
+  <id name="RolID" type="java.lang.Integer">
+   <column name="RolID"/>
+   <generator class="assigned"/>
+  </id>
+  <property generated="never" lazy="false" name="RolLabel" type="java.lang.String">
+   <column name="RolLabel"/>
+  </property>
+  <property generated="never" lazy="false" name="RolDescription" type="java.lang.String">
+   <column name="RolDescription"/>
+  </property>
+  <property generated="never" lazy="false" name="RolCrDate" type="java.util.Date">
+   <column name="RolCrDate"/>
+  </property>
+  <property generated="never" lazy="false" name="RolStatus" type="java.lang.Integer">
+   <column name="RolStatus"/>
+  </property>
+ </class>
+</hibernate-mapping>

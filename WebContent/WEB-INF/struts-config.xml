@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+  <data-sources>
+  </data-sources>
+  <form-beans>
+    <form-bean name="menuForm" type="cl.open.openproject.menu.form.MenuForm"/>
+    <form-bean name="logInForm" type="cl.open.openproject.form.LogInForm"/>
+    <form-bean name="listTemplateForm" type="cl.open.pyc.CardDesignTecnology.form.ListTemplateForm"/>
+    <form-bean name="listTemplateCardDesignForm" type="cl.open.pyc.CardDesign.form.ListTemplateCardDesignForm"/>
+  </form-beans>
+  <global-exceptions>
+  </global-exceptions>
+  <global-forwards>
+    <forward name="/presentation" path="/presentation.do"/>
+  </global-forwards>
+  <action-mappings>
+    <action path="/presentation" forward="/home.jsp">
+    </action>
+    <action path="/logIn" name="logInForm" type="cl.open.openproject.action.LogInAction" scope="request">
+      <forward name="home" path="/appweb.html"/>
+      <forward name="success" path="/appweb.html"/>
+      <forward name="error" path="/print.jsp"/>
+    </action>
+    <action path="/logOut" name="logInForm" type="cl.open.openproject.action.LogOutAction" scope="request">
+      <forward name="login" path="/index.jsp"/>
+    </action>
+    <action path="/index" name="menuForm" type="cl.open.openproject.menu.action.MenuAction" scope="request">
+      <forward name="success" path="/menu.jsp"/>
+      <forward name="error" path="/menu.jsp"/>
+      <forward name="menu" path="/menu.jsp"/>
+    </action>
+    <action path="/jsp/SwitchLanguage" type="cl.open.openproject.language.action.SwitchLanguageAction">
+      <forward name="success" path="/index.do"/>
+    </action>
+    <action path="/ValidateSession" type="cl.open.openproject.action.ValidateSession" scope="request" parameter="action">
+    </action>
+    <action path="/AppletCardDesignTecnology/Template" name="listTemplateForm" type="cl.open.pyc.CardDesignTecnology.action.TemplateAction" scope="request">
+      <forward name="success" path="/AppletCardDesignTecnology/CardDesignTechnology.do"/>
+    </action>
+    <action path="/AppletCardDesignTool/Template" name="listTemplateCardDesignForm" type="cl.open.pyc.CardDesign.action.TemplatesCardDesign" scope="request">
+      <forward name="success" path="/AppletCardDesignTool/AppletCardDesignTool.jsp"/>
+    </action>
+    <action path="/AppletCardDesignTool/CardDesignTemplated" name="listTemplateCardDesignForm" type="cl.open.pyc.CardDesign.action.ListTemplatesCardDesign" scope="request">
+      <forward name="error" path="/login.jsp"/>
+      <forward name="success" path="/AppletCardDesignTool/CardDesignTemplated.jsp"/>
+    </action>
+    <action path="/AppletCardDesignTecnology/CardDesignTechnology" name="listTemplateForm" type="cl.open.pyc.CardDesignTecnology.action.ListTemplateAction" scope="request">
+      <forward name="success" path="/AppletCardDesignTecnology/CardDesignTechnology.jsp"/>
+      <forward name="error" path="/login.jsp"/>
+    </action>
+    <action path="/templatePreview" name="listTemplateCardDesignForm" type="cl.open.pyc.CardDesign.action.CardTemplatesAction" scope="request" parameter="method">
+      <forward name="success" path="/iframePreview.jsp"/>
+    </action>
+    <action path="/template" type="cl.open.pyc.CardDesign.action.ListTemplateAction" scope="session" validate="false" parameter="method">
+      <forward name="success" path="/AppletCardDesignTool/CardDesignTemplated.jsp"/>
+    </action>
+    <action path="/templatetechnology" type="cl.open.pyc.CardDesignTecnology.action.ListTemplateTechnologyAction" scope="session" validate="false" parameter="method">
+      <forward name="success" path="/AppletCardDesignTecnology/CardDesignTechnology.jsp"/>
+    </action>
+  </action-mappings>
+  <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+  <!-- Contains the keys and strings for internationalization (HRA 20100723) -->
+  <message-resources parameter="cl.open.openproject.config.application" null="false"/>
+  <message-resources parameter="MessageResources"/>
+  <plug-in className="org.apache.struts.tiles.TilesPlugin">
+    <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml"/>
+    <set-property property="moduleAware" value="true"/>
+  </plug-in>
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+  </plug-in>
+</struts-config>

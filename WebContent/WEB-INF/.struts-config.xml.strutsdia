@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="StrutsProcess">
+ <PROCESS-ITEM ID="#index" NAME="action0" PATH="/index"
+  SHAPE="256,33,0,0" TITLE="menuForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0" PATH="/menu.jsp"
+   TARGET="page1" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="error" NAME="forward1" PATH="/menu.jsp"
+   TARGET="page1" TITLE="error" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="menu" NAME="forward2" PATH="/menu.jsp"
+   TARGET="page1" TITLE="menu" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#logIn" NAME="action1" PATH="/logIn"
+  SHAPE="32,17,0,0" TITLE="logInForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0" PATH="/appweb.html"
+   TARGET="page3" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="error" NAME="forward1" PATH="/print.jsp"
+   TARGET="page2" TITLE="error" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="home" NAME="forward2" PATH="/appweb.html"
+   TARGET="page3" TITLE="home" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#logOut" NAME="action2" PATH="/logOut"
+  SHAPE="56,160,100,41" TITLE="logInForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="login" NAME="forward0" PATH="/index.jsp"
+   TARGET="page8" TITLE="login" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page0" PATH="/start.jsp" SHAPE="464,18,0,0"
+  SUBTYPE="jsp" TITLE="start.jsp" TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/logOut.do"
+   SUBTYPE="confirmed" TARGET="action2" TITLE="/logOut.do" TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#jsp#SwitchLanguage" NAME="action3"
+  PATH="/jsp/SwitchLanguage" SHAPE="672,18,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0" PATH="/index.do"
+   TARGET="action0" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page1" PATH="/menu.jsp" SHAPE="464,145,0,0"
+  SUBTYPE="jsp" TITLE="menu.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page2" PATH="/print.jsp" SHAPE="464,257,0,0"
+  SUBTYPE="jsp" TITLE="print.jsp" TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/logIn.do" SUBTYPE="confirmed"
+   TARGET="action1" TITLE="/logIn.do" TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page3" PATH="/appweb.html" SHAPE="240,129,0,0"
+  SUBTYPE="html" TITLE="appweb.html" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page4" PATH="/index.html" SHAPE="240,241,0,0"
+  SUBTYPE="html" TITLE="index.html" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page5" PATH="/login.jsp" SHAPE="240,353,0,0"
+  SUBTYPE="jsp" TITLE="login.jsp" TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/logIn.do" SUBTYPE="confirmed"
+   TARGET="action1" TITLE="/logIn.do" TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page6" PATH="/modules.html" SHAPE="656,129,0,0"
+  SUBTYPE="html" TITLE="modules.html" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page7" PATH="/appweb.jsp" SHAPE="864,17,0,0"
+  SUBTYPE="jsp" TITLE="appweb.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page9" PATH="/reload.jsp" SHAPE="448,353,0,0"
+  SUBTYPE="jsp" TITLE="reload.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page8" PATH="/index.jsp" SHAPE="240,465,0,0"
+  SUBTYPE="jsp" TITLE="index.jsp" TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/presentation"
+   SUBTYPE="confirmed" TARGET="action4" TITLE="/presentation"
+   TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="/presentation" NAME="forward0"
+  PATH="/presentation.do" SHAPE="96,576,112,21" TARGET="action4"
+  TITLE="/presentation" TYPE="forward" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#presentation" NAME="action4" PATH="/presentation"
+  SHAPE="336,568,100,41" SUBTYPE="forward" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action4" PATH="/index.html" TARGET="page4"
+   TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+</PROCESS>

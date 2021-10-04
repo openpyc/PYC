@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-05-2010 02:45:59 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+ <class name="cl.open.openproject.menu.pojo.Resource_has_rol" table="resource_has_rol">
+  <id name="RolID" type="java.lang.Integer">
+   <column name="RolID"/>
+   <generator class="assigned"/>
+  </id>
+  <property generated="never" lazy="false" name="ResourceID" type="java.lang.Integer">
+   <column name="ResourceID"/>
+  </property>
+ </class>
+</hibernate-mapping>

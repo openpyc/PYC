@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 17-08-2010 12:26:44 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+    <class name="cl.open.openproject.pojo.Customer" table="customer" catalog="innovain_PYC">
+        <id name="customerId" type="java.lang.Long">
+            <column name="CustomerID" />
+            <generator class="identity" />
+        </id>
+        <property name="companyId" type="java.lang.Integer">
+            <column name="CompanyID" not-null="true" />
+        </property>
+        <property name="stateCountryId" type="java.lang.Integer">
+            <column name="StateCountryID" not-null="true" />
+        </property>
+        <property name="customerName" type="string">
+            <column name="CustomerName" length="45" />
+        </property>
+        <property name="parameterIdcustomerQuestionForgot1" type="java.lang.Integer">
+            <column name="ParameterIDCustomerQuestion_Forgot_1" />
+        </property>
+        <property name="customerAnswerForgot1" type="string">
+            <column name="CustomerAnswer_Forgot_1" length="45" />
+        </property>
+        <property name="parameterIdcustomerQuestionForgot2" type="java.lang.Integer">
+            <column name="ParameterIDCustomerQuestion_Forgot_2" />
+        </property>
+        <property name="customerAnswerForgot2" type="string">
+            <column name="CustomerAnswer_Forgot_2" length="45" />
+        </property>
+        <property name="idState" type="java.lang.Integer">
+            <column name="IdState" />
+        </property>
+        <property name="customerDateCreation" type="timestamp">
+            <column name="CustomerDateCreation" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

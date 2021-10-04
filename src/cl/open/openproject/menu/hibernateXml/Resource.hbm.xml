@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-05-2010 02:45:59 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+ <class name="cl.open.openproject.menu.pojo.Resource" table="resource">
+  <id name="ResourceID" type="integer">
+   <column name="ResourceID"/>
+   <generator class="assigned"/>
+  </id>
+  <property generated="never" lazy="false" name="ResourceLabel" type="java.lang.String">
+   <column name="ResourceLabel"/>
+  </property>
+  <property generated="never" lazy="false" name="ResourceLinkURL" type="java.lang.String">
+   <column name="ResourceLinkURL"/>
+  </property>
+  <property generated="never" lazy="false" name="ResourceParentID" type="integer">
+   <column name="ResourceParentID"/>
+  </property>
+  <property generated="never" lazy="false" name="ResourceLoginFlg" type="integer">
+   <column name="ResourceLoginFlg"/>
+  </property>
+  <property generated="never" lazy="false" name="ResourceOrderMenu" type="integer">
+   <column name="ResourceOrderMenu"/>
+  </property>
+  <property generated="never" lazy="false" name="ResourceStatus" type="integer">
+   <column name="ResourceStatus"/>
+  </property>
+  <property name="ResourceLevel" type="integer">
+   <column name="ResourceLevel"/>
+  </property>
+ </class>
+</hibernate-mapping>
